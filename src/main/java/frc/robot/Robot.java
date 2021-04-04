@@ -7,6 +7,9 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.Test.ChsrTest01;
+import frc.robot.Test.ChsrTest02;
+import frc.robot.Test.ChsrTest03;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -29,9 +32,9 @@ public class Robot extends TimedRobot {
     my2_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     my2_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("My2 Auto choices", my2_chooser);
-    ChsrTest.chsr01Init();
-    ChsrTest.chsr02Init();
-    ChsrTest.chsr03Init();
+    ChsrTest01.chsrInit();
+    ChsrTest02.chsrInit();
+    ChsrTest03.chsrInit();
   }
 
   /**
@@ -59,9 +62,9 @@ public class Robot extends TimedRobot {
     m_autoSelected = my2_chooser.getSelected();
     // m_autoSelected = SmartDashboard.getString("Auto Selector", kDefaultAuto);
     System.out.println("Auto selected: " + m_autoSelected);
-    ChsrTest.chsr01AutoInit();
-    ChsrTest.chsr02AutoInit();
-    ChsrTest.chsr03AutoInit();
+    ChsrTest01.chsrAutoInit();
+    ChsrTest02.chsrAutoInit();
+    ChsrTest03.chsrAutoInit();
   }
 
   /** This function is called periodically during autonomous. */
@@ -76,9 +79,9 @@ public class Robot extends TimedRobot {
         // Put default auto code here
         break;
     }
-    ChsrTest.chsr01AutoPeriodic();
-    ChsrTest.chsr02AutoPeriodic();
-    ChsrTest.chsr03AutoPeriodic();
+    ChsrTest01.chsrAutoPeriodic();
+    ChsrTest02.chsrAutoPeriodic();
+    ChsrTest03.chsrAutoPeriodic();
   }
 
   /** This function is called once when teleop is enabled. */
